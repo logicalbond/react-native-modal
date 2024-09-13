@@ -537,10 +537,12 @@ export class ReactNativeModal extends React.Component {
     if (this.state.isVisible) {
       this.open();
     }
-    this.backHandlerEventSubscription = BackHandler.addEventListener(
-      'hardwareBackPress',
-      this.onBackButtonPress,
-    );
+    if (Platform.OS !== 'web') {
+      this.backHandlerEventSubscription = BackHandler.addEventListener(
+        'hardwareBackPress',
+        this.onBackButtonPress,
+      );
+    }
   }
   componentWillUnmount() {
     if (this.backHandlerEventSubscription) {
