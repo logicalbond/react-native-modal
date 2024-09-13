@@ -26,7 +26,6 @@ contents.xcworkspacedata
 # Android/IntelliJ
 #
 build/
-dist/
 .idea
 .gradle
 local.properties
@@ -52,3 +51,4 @@ buck-out/
 !.vscode/launch.json
 !.vscode/extensions.json
 
+/.vscode/settings.json
